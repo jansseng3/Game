@@ -4,9 +4,11 @@ public class Game {
     private Level levelThree;
     private boolean bonus;
 
-    levelOne = new Level();
-    levelTwo = new Level();
-    levelThree - new Level();
+    public Game() {
+        levelOne = new Level();
+        levelTwo = new Level();
+        levelThree - new Level();
+    }
 
     private Level levelOne;
 
@@ -18,4 +20,5 @@ public class Game {
     public void makeBonus() {
         bonus = true;
     }
+
 }

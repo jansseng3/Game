@@ -8,5 +8,7 @@ public class Main {
         one.getLevel(2).reachGoal();
         one.getLevel(2).reachGoal(100);
         one.getLevel(3).reachGoal();
+        one.getLevel(3).setPoints(500);
+        one.makeBonus();
     }
 }

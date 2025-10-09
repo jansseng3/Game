@@ -14,14 +14,20 @@ public class Level {
         return points;
     }
 
-    public void setPoints(int, p) {
+    public void setPoints(int p) {
         points = p;
     }
 
     public Level getLevel(int i) {
-        if (i == 1) return levelOne;
-        if (i == 2) return levelTwo;
-        if (i == 3) return levelThree;
+        if (i == 1) {
+            return levelOne;
+        }
+        if (i == 2) {
+            return levelTwo;
+        }
+        if (i == 3) {
+            return levelThree;
+        }
         return null;
     }
 
@@ -31,7 +37,13 @@ public class Level {
             points += levelOne.getPoints();
             if (levelTwo.goalReached()) {
                 points += levelTwo.getPoints();
+                if (levelThree.goalReached()) {
+                    points += levelThree.getPoints();
+                        if(isBonus()) {
+                            points *= 3;
+                        }
             }
+        return  points;
         }
     }
 }
